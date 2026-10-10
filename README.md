@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calculator
 
-## Getting Started
+Uma calculadora científica responsiva desenvolvida com Next.js, React e TypeScript. Ela oferece operações aritméticas básicas, funções científicas, entrada pelo teclado e histórico de cálculos salvo no navegador.
 
-First, run the development server:
+![Captura de tela da calculadora](./calculator-reference.png)
+
+## Recursos
+
+- Funções científicas: raízes quadradas, potências, trigonometria, logaritmos, fatoriais, π e o número de Euler.
+- Avaliação de expressões com mathjs e respeito à precedência matemática dos operadores.
+- Suporte ao teclado físico e teclas adequadas para telas sensíveis ao toque.
+- Histórico de cálculos com opção de reutilizar expressões e resultados, excluir itens individualmente e limpar tudo após confirmação.
+- O histórico fica salvo no `localStorage` do navegador; não é necessário criar uma conta e nenhum serviço remoto é usado.
+- As funções trigonométricas usam radianos. Não há modo de graus.
+- Interface clara e responsiva para computadores e dispositivos móveis.
+
+## Tecnologias
+
+- Next.js App Router
+- React e TypeScript
+- Tailwind CSS 4
+- mathjs
+- Vitest
+- lucide-react
+
+## Requisitos
+
+- Node.js 20 ou superior
+- npm
+
+## Instalação e execução
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Testes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Compilação para produção
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
